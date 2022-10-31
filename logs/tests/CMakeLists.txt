@@ -1,0 +1,2 @@
+add_executable(logstest logstest.cpp)
+target_link_libraries(logstest libserver_base)

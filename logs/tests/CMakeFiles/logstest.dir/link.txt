@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/logstest.dir/logstest.cpp.o -o logstest  -llibserver_base 

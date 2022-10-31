@@ -1,0 +1,3 @@
+/home/zt/program/XZtwebserver/logs/CMakeFiles/libserver_base.dir
+/home/zt/program/XZtwebserver/logs/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/logs/CMakeFiles/rebuild_cache.dir

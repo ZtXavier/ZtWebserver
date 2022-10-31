@@ -1,0 +1,3 @@
+/home/zt/program/XZtwebserver/logs/tests/CMakeFiles/logstest.dir
+/home/zt/program/XZtwebserver/logs/tests/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/logs/tests/CMakeFiles/rebuild_cache.dir
