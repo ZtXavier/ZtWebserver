@@ -201,7 +201,7 @@ int socket_bind_listen(int port) {
     server_addr.sin_family = AF_INET;
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     server_addr.sin_port = htons((unsigned short)port);
-    if(bind(listen_fd, (struct sockaddtr *)&server_addr, sizeof(server_addr)) == -1) {
+    if(bind(listen_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1) {
         close(listen_fd);
         return -1;
     }
