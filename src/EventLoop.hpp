@@ -23,7 +23,12 @@ class EventLoop {
         void Loop();
         void RunInLoop(Functor&& cb);
         void QueueInLoop(Functor&& cb);
-        bool isInLoopThread() const { return threadId_ == CurrentThread::tid(); }
+        bool isInLoopThread() const {
+            return threadId_ == CurrentThread::tid(); 
+        }
+        void assertInLoopThread() {
+            assert(isInLoopThread());
+        }
         void shutdown(std::shared_ptr<Channel> channel) {
             shutDownWrite(channel->getFd());
         }
