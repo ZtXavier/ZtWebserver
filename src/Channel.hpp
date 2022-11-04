@@ -14,6 +14,8 @@ namespace zvws {
 class EventLoop;
 class Httpsolution;
 
+
+// Channel 中注册回调函数,处理事件请求的方法
 class Channel {
     private:
         typedef std::function<void()> Callback;
@@ -44,7 +46,8 @@ class Channel {
         void setHolder(std::shared_ptr<Httpsolution> holder) {
             holder_ = holder;
         }
-        std::shared_ptr<Httpsolution> getHodler() {
+        // 弱引用转强引用获取指针
+        std::shared_ptr<Httpsolution> getHolder() {
             std::shared_ptr<Httpsolution> ret(holder_.lock());
             return ret;
         }
@@ -61,7 +64,7 @@ class Channel {
             errorHandler_ = errorHandler; 
         }
 
-        void setconnHandler(Callback && connHandler) { 
+        void setConnHandler(Callback && connHandler) { 
             connHandler_ = connHandler; 
         }
 
@@ -88,13 +91,13 @@ class Channel {
             if(revents_ & EPOLLOUT) {
                 handleWrite();
             }
-            handleconn();
+            handleConn();
         }
 
         void handleRead();
         void handleWrite();
         void handleError(int fd,int error_num,std::string short_msg);
-        void handleconn();
+        void handleConn();
 
         void setRevents(__uint32_t ev) {
              revents_ = ev;
@@ -108,6 +111,7 @@ class Channel {
             return events_;
         }
 
+        // 更新事件
         bool EqualAndUpdateLastEvents() {
             bool ret = (lastEvents_ == events_);
             lastEvents_ = events_;
