@@ -4,6 +4,7 @@
 #include<iostream>
 #include<functional>
 #include<vector>
+#include<assert.h>
 #include<memory>
 #include"Channel.hpp"
 #include"../logs/Logging.hpp"

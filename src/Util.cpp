@@ -152,6 +152,7 @@ void handle_for_sigpipe() {
     }
 }
 
+// 设置非阻塞套接字,能够立刻返回
 int setSocketNoBlocking(int fd) {
     int flag = fcntl(fd, F_GETFL, 0);
     if(flag == -1) return -1;
@@ -163,15 +164,18 @@ int setSocketNoBlocking(int fd) {
     return 0;
 }
 
+// 不设置缓冲区,目的是将来一个包就发送出去,默认是有一个缓冲区,使用nagle算法来将多个包粘在一起一起发送
 void setSocketNodelay(int fd) {
     int enable = 1;
     setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (void *)&enable, sizeof(enable));
 }
 
+
+// 设置延迟关闭,为了在断开链接后能将剩余的包发送完
 void setSocketNoLinger(int fd) {
     struct linger linger_;
     linger_.l_onoff = 1;
-    linger_.l_linger = 30;
+    linger_.l_linger = 10;
     setsockopt(fd, SOL_SOCKET, SO_LINGER, (const char*)&linger_,sizeof(linger_));
 }
 
