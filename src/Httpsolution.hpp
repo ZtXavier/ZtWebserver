@@ -26,9 +26,9 @@ namespace detail {
     };
 
     enum UriState {
-        PARSE_HEADER_SUCCESS = 1,
-        PARSE_HEADER_AGAIN,
-        PARSE_HEADER_ERROR
+        PARSE_URI_SUCCESS = 1,
+        PARSE_URI_AGAIN,
+        PARSE_URI_ERROR
     };
 
     enum AnalysisState {
@@ -113,6 +113,7 @@ namespace detail {
             std::shared_ptr<Channel> channel_;
             std::string inBuffer_;
             std::string outBuffer_;
+            ConnectionState connectionState_;
             int fd_;
             bool error_;
 
@@ -122,7 +123,7 @@ namespace detail {
             std::string path_;
             ProcessState state_;
             ParseState Hstate_;
-            bool keepAlive;
+            bool keepAlive_;
             int nowReadPos_;
             std::map<std::string, std::string> headers_;
             std::weak_ptr<TimerNode> timer_;

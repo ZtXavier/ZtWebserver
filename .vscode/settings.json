@@ -6,6 +6,10 @@
         "string": "cpp",
         "types.h": "c",
         "unordered_map": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "future": "cpp",
+        "shared_mutex": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }
