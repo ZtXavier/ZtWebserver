@@ -16,8 +16,8 @@ namespace zvws {
         pthread_once_t MineType::once_control = PTHREAD_ONCE_INIT;
         std::unordered_map<std::string, std::string> MineType::mine;
         const __uint32_t DEFAULT_EVENT = EPOLLIN | EPOLLET | EPOLLONESHOT;
-        const int DEFAULT_EXPIRED_TIME = 2000;
-        const int DEFAULT_KEEP_ALIVE_TIME = 5 * 60 * 1000;
+        #define DEFAULT_EXPIRED_TIME  2000
+        #define DEFAULT_KEEP_ALIVE_TIME  5 * 60 * 1000
 
         // 初始化哈希表
         void MineType::init() {
@@ -411,7 +411,10 @@ namespace zvws {
         }
         
         AnalysisState Httpsolution::analysisRequest() {
-            if(method_ == METHOD_GET || method_ == METHOD_HEAD) {
+            if(method_ == METHOD_POST) {
+                //TODO
+            }
+            else if(method_ == METHOD_GET || method_ == METHOD_HEAD) {
                 std::string header;
                 header += "HTTP/1.1 200 OK\r\n";
                 if((headers_.find("Connection") != headers_.end()) &&
@@ -435,11 +438,11 @@ namespace zvws {
                 }
                 if(fileName_ == "favicon.ico") {
                     header += "Content-Type: image/png\r\n";
-                    header += "Content-Length: " + to_string(sizeof(favicon) + "\r\n");
+                    // header += "Content-Length: " + std::to_string(sizeof(favicon) + "\r\n");
                     header += "Server: ZtWebServer\r\n";
                     header += "\r\n";
                     outBuffer_ += header;
-                    outBuffer_ += std::string(favicon, favicon + sizeof(favicon));
+                    // outBuffer_ += std::string(favicon, favicon + sizeof(favicon));
                     return ANALYSIS_SUCCESS;
                 }
                 struct stat sbuf;
@@ -456,12 +459,14 @@ namespace zvws {
                 if(method_ == METHOD_HEAD) {
                     return ANALYSIS_SUCCESS;
                 }
+                // 对文件的操作选择mmap对其做一个映射
                 int src_fd = open(fileName_.c_str(), O_RDONLY, 0);
                 if (src_fd < 0) {
                     outBuffer_.clear();
                     handleError(fd_, 404, "Not Found!");
                     return ANALYSIS_ERROR;
                 }
+                // 返回一个映射的首地址(void*) 第一个参数作为null,让内核去选择,这样做很便捷
                 void* mmapret = mmap(NULL, sbuf.st_size, PROT_READ, MAP_PRIVATE, src_fd, 0);
                 close(src_fd);
                 if(mmapret == (void*)(-1)) {
@@ -473,16 +478,43 @@ namespace zvws {
                 char *src_addr = static_cast<char*> (mmapret);
                 outBuffer_ += std::string(src_addr, src_addr + sbuf.st_size);
                 munmap(mmapret, sbuf.st_size);    
-                return ANALYSIS_ERROR;
+                return ANALYSIS_SUCCESS;
             }
-            
-
-
-
-
+            return ANALYSIS_ERROR;
         }
 
+        void Httpsolution::handleError(int fd, int err, std::string short_msg) {
+            short_msg = " " + short_msg;
+            char send_Buffer[4096];
+            std::string body_buff;
+            body_buff += "<html><title>oh! find error...</title>";
+            body_buff += "<body bgcolor=\"0000ff\">";
+            body_buff += std::to_string(err) + short_msg;
+            body_buff += "<hr><em> XZtWebserver</em>\n</body></html>";
 
+            std::string header_buff;
+            header_buff += "HTTP/1.1 " + std::to_string(err) + short_msg + "\r\n";
+            header_buff += "Content-Type: text/html\r\n";
+            header_buff += "Connection: Close\r\n";
+            header_buff += "Content-Length: " + std::to_string(body_buff.size()) + "\r\n";
+            header_buff += "XZtWebserver\r\n";
+            header_buff += "\r\n";
+            sprintf(send_Buffer, "%s", header_buff.c_str());
+            writen(fd, send_Buffer, strlen(send_Buffer));
+            sprintf(send_Buffer, "%s", body_buff.c_str());
+            writen(fd, send_Buffer, strlen(send_Buffer));
+        }   
+
+
+        void Httpsolution::handleClose() {
+            connectionState_ = H_DISCONNECTED;
+            std::shared_ptr<Httpsolution> guard(shared_from_this());
+            loop_->removeFromPoller(channel_);
+        }
+
+        void Httpsolution::newEvent() {
+            channel_->setRevents(DEFAULT_EVENT);
+        }
     }
 }
 
