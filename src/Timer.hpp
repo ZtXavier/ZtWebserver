@@ -53,7 +53,7 @@ class TimerManager {
         private:
         // 使用智能指针进行封装类,放入优先队列中
         typedef std::shared_ptr<TimerNode> SptTimerNode;
-        std::priority_queue<SptTimerNode,std::deque<SptTimerNode>,TimerCmp> tnqueue;
+        std::priority_queue<SptTimerNode, std::deque<SptTimerNode>, TimerCmp> tnqueue;
 };
 
 }

@@ -31,7 +31,6 @@ namespace zvws{
 
     void defaultOutput(const char* msg, int len){
         size_t n = fwrite(msg, 1, len, stdout);
-        //FIXME check n
         (void)n;
     }
 

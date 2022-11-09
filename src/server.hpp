@@ -7,6 +7,7 @@
 #include "EventLoop.hpp"
 #include "EventLoopThreadPool.hpp"
 
+
 namespace zvws {
 
     namespace detail {
@@ -29,6 +30,7 @@ namespace zvws {
                 EventLoop *loop_;
                 std::unique_ptr<EventLoopThreadPool> eventLoopThreadPool_;
                 std::shared_ptr<Channel> acceptChannel_;
+
                 int threadNum_;
                 int Port_;
                 int listenFd_;

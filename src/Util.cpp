@@ -11,7 +11,7 @@
 
 
 const int MAX_BUFFSIZE = 4096;
-
+// 底层的read和write的包装,参考muduo
 ssize_t readn(int fd,void *buff,size_t n) {
     size_t nleft = n;
     ssize_t nread = 0;
