@@ -73,15 +73,15 @@ namespace detail {
 
 
     //自定义一个类型封装通过map来存储域名和buffer的对应关系
-    class MineType {
+    class MimeType {
         private:
             static void init();
-            static std::unordered_map<std::string,std::string> mine;
-            MineType();
-            MineType(const MineType &minetype);
+            static std::unordered_map<std::string,std::string> mime;
+            MimeType();
+            MimeType(const MimeType &minetype);
 
         public:
-            static std::string getMine(const std::string &buffix);
+            static std::string getMime(const std::string &buffix);
         private:
             static pthread_once_t once_control;
     };

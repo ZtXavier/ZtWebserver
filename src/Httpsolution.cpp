@@ -13,38 +13,38 @@
 namespace zvws {
     namespace detail {
 
-        pthread_once_t MineType::once_control = PTHREAD_ONCE_INIT;
-        std::unordered_map<std::string, std::string> MineType::mine;
+        pthread_once_t MimeType::once_control = PTHREAD_ONCE_INIT;
+        std::unordered_map<std::string, std::string> MimeType::mime;
         const __uint32_t DEFAULT_EVENT = EPOLLIN | EPOLLET | EPOLLONESHOT;
         #define DEFAULT_EXPIRED_TIME  2000
         #define DEFAULT_KEEP_ALIVE_TIME  5 * 60 * 1000
 
         // 初始化哈希表
-        void MineType::init() {
-            mine[".html"] = "text/html";
-            mine[".avi"] = "video/x-msvideo";
-            mine[".bmp"] = "image/bmp";
-            mine[".c"] = "text/plain";
-            mine[".doc"] = "application/msword";
-            mine[".gif"] = "image/gif";
-            mine[".gz"] = "application/x-gzip";
-            mine[".htm"] = "text/html";
-            mine[".ico"] = "image/x-icon";
-            mine[".jpg"] = "image/jpeg";
-            mine[".png"] = "image/png";
-            mine[".txt"] = "text/plain";
-            mine[".mp3"] = "audio/mp3";
-            mine["default"] = "text/html";
+        void MimeType::init() {
+            mime[".html"] = "text/html";
+            mime[".avi"] = "video/x-msvideo";
+            mime[".bmp"] = "image/bmp";
+            mime[".c"] = "text/plain";
+            mime[".doc"] = "application/msword";
+            mime[".gif"] = "image/gif";
+            mime[".gz"] = "application/x-gzip";
+            mime[".htm"] = "text/html";
+            mime[".ico"] = "image/x-icon";
+            mime[".jpg"] = "image/jpeg";
+            mime[".png"] = "image/png";
+            mime[".txt"] = "text/plain";
+            mime[".mp3"] = "audio/mp3";
+            mime["default"] = "text/html";
         }
 
         // 获取文件后缀名
-        std::string MineType::getMine(const std::string& suffix) {
-            pthread_once(&once_control, MineType::init);
+        std::string MimeType::getMime(const std::string& suffix) {
+            pthread_once(&once_control, MimeType::init);
             // 没有找到后缀名
-            if (mine.find(suffix) == mine.end()) {
-                return mine["default"];
+            if (mime.find(suffix) == mime.end()) {
+                return mime["default"];
             } else {
-                return mine[suffix];
+                return mime[suffix];
             }
         }
 
@@ -428,9 +428,9 @@ namespace zvws {
                 int dot_pos = fileName_.find('.');
                 std::string filetype;
                 if(dot_pos < 0) {
-                    filetype = MineType::getMine("defualt");
+                    filetype = MimeType::getMime("defualt");
                 } else {
-                    filetype = MineType::getMine(fileName_.substr(dot_pos));
+                    filetype = MimeType::getMime(fileName_.substr(dot_pos));
                 }
                 if (fileName_ == "hello") {
                     outBuffer_ = "HTTP/1.1 200 OK\r\nContent-type: text/plain\r\n\r\nhello world";
