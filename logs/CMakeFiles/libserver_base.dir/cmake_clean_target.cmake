@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libWbserver_base.a"
+  "libserver_base.a"
 )

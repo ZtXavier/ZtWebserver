@@ -1,2 +1,2 @@
-/usr/bin/ar qc libWbserver_base.a CMakeFiles/libserver_base.dir/Asynclogging.o CMakeFiles/libserver_base.dir/Fileappend.o CMakeFiles/libserver_base.dir/LoggFile.o CMakeFiles/libserver_base.dir/Logging.o CMakeFiles/libserver_base.dir/Thread.o
-/usr/bin/ranlib libWbserver_base.a
+/usr/bin/ar qc libserver_base.a CMakeFiles/libserver_base.dir/Asynclogging.o CMakeFiles/libserver_base.dir/Fileappend.o CMakeFiles/libserver_base.dir/LoggFile.o CMakeFiles/libserver_base.dir/Logging.o CMakeFiles/libserver_base.dir/Thread.o CMakeFiles/libserver_base.dir/Logstream.o CMakeFiles/libserver_base.dir/CountDownLatch.o
+/usr/bin/ranlib libserver_base.a

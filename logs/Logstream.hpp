@@ -13,48 +13,44 @@
 namespace zvws{
 namespace detail{
 
-constexpr int SmallBuffer = 4000;
-constexpr int LargerBuffer = 4000*1000;
+constexpr int kSmallBuffer = 4000;
+constexpr int kLargerBuffer = 4000*1000;
 
 template<int BufferSize>
 class FixedBuffer : public Nocopyable{
 public: 
-        FixedBuffer() : Spot(0), Buffer_(std::make_unique<char[]>(BufferSize)){
-            setcookie(CookieStart); 
-        }
-        
-        void setcookie(std::function<void()> cookie) {cookie_ = std::move(cookie);}
-        constexpr uint32_t Length() const noexcept {return Spot;}
-        uint32_t avail() const {return BufferSize - Spot;}
-        void add(uint32_t len) {Spot += len;}
-        void setSpotBegin() {Spot = 0;}
-        char* current() const {return Buffer_.get() + Spot;}
-        const char* data() const {return Buffer_.get();}
-        void setZero() {memset(Buffer_.get(), 0, BufferSize);}
-        void reset() {Spot = 0;}
-        std::string toString() const {return std::string(Buffer_.get(), Spot);}
+    FixedBuffer() : cur_(data_) {}
 
-        void append(const char* buf, size_t len){
-            if(avail() > len){
-                //使用共享内存来拷贝
-                memcpy(Buffer_.get() + Spot, buf, len);
-                Spot += len;
-            }
-        }
-    private:
-        std::unique_ptr<char[]> Buffer_;
-        std::function<void()> cookie_;  // 用于在 core dump 文件中查找丢失的日志，其值为某个函数的地址；
-        uint32_t Spot;
+    ~FixedBuffer() {}
 
-        const char* end() const {return std::advance(Buffer_, Length());}
-        static void CookieStart(){};
-        static void CookieEnd(){};
+  void append(const char* buf, size_t len) {
+    if (avail() > static_cast<int>(len)) {
+      memcpy(cur_, buf, len);
+      cur_ += len;
+    }
+  }
+
+  const char* data() const { return data_; }
+  int Length() const { return static_cast<int>(cur_ - data_); }
+
+  char* current() { return cur_; }
+  int avail() const { return static_cast<int>(end() - cur_); }
+  void add(size_t len) { cur_ += len; }
+
+  void reset() { cur_ = data_; }
+  void setZero() { memset(data_, 0, sizeof data_); }
+
+ private:
+  const char* end() const { return data_ + sizeof data_; }
+
+  char data_[BufferSize];
+  char* cur_;
 };
 
     class Logstream{
         using self = Logstream;
     public:
-        using Buffer = FixedBuffer<SmallBuffer>;
+        using Buffer = FixedBuffer<kSmallBuffer>;
 
         self& operator<<(bool flag) {
             buffer_.append(flag ? "1" : "0", 1);
@@ -77,7 +73,7 @@ public:
             return *this;
         }
         self& operator<<(double);
-        // self& operator<<(long double);
+        self& operator<<(long double);
 
         self& operator<<(char v) {
             buffer_.append(&v, 1);
@@ -105,10 +101,6 @@ public:
             return *this;
         }
 
-        self& operator<<(const Buffer& v){
-            *this << v.toString();
-            return *this;
-        }
 
         void append(const char* data, int len) {buffer_.append(data, len); }
         const Buffer& buffer() const { return buffer_; }
@@ -117,10 +109,9 @@ public:
 
     private:
         Buffer buffer_; 
-        constexpr const static int kMaxNumericSize = 32;
-
         template<typename T>
         void formatInteger(T);
+        constexpr const static int kMaxNumericSize = 32;
     };
 
     class Fmt{// : noncopyable

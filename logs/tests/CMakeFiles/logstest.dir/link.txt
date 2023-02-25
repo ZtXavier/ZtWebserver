@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/logstest.dir/logstest.cpp.o -o logstest  -llibserver_base 
+/usr/bin/c++ -rdynamic CMakeFiles/logstest.dir/logstest.o -o logstest   -L/home/zt/program/XZtwebserver/logs  ../libserver_base.a -lpthread -lrt 

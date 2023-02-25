@@ -37,7 +37,7 @@ namespace zvws{
 
             private:
                 void threadFunc();
-                typedef FixedBuffer<LargerBuffer> Buffer;
+                typedef FixedBuffer<kLargerBuffer> Buffer;
                 typedef std::vector<std::shared_ptr<Buffer>> BufferVector;
                 typedef std::shared_ptr<Buffer> BufferPtr;
                 const int flushInterval_;
