@@ -1,0 +1,14 @@
+/home/zt/program/XZtwebserver/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/CMakeFiles/rebuild_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/CMakeFiles/ZWebServer.dir
+/home/zt/program/XZtwebserver/ZWebServer/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/CMakeFiles/rebuild_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/base/CMakeFiles/libserver_base.dir
+/home/zt/program/XZtwebserver/ZWebServer/base/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/base/CMakeFiles/rebuild_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/base/tests/CMakeFiles/logstest.dir
+/home/zt/program/XZtwebserver/ZWebServer/base/tests/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/base/tests/CMakeFiles/rebuild_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/tests/CMakeFiles/HTTPClient.dir
+/home/zt/program/XZtwebserver/ZWebServer/tests/CMakeFiles/edit_cache.dir
+/home/zt/program/XZtwebserver/ZWebServer/tests/CMakeFiles/rebuild_cache.dir
