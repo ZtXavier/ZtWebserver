@@ -5,10 +5,10 @@
 #include "EventLoop.hpp"
 #include "Util.hpp"
 #include "base/Logging.hpp"
-
+#include"Channel.hpp"
 namespace zvws {
     namespace detail {
-
+        using namespace CurrentThread;
         thread_local EventLoop* t_loopInThisThread = 0;
 
         int CreateEvtfd() {
@@ -44,6 +44,17 @@ namespace zvws {
             close(wakeupFd_);
             t_loopInThisThread = 0;
         }
+
+        void EventLoop::handleRead() {
+            uint64_t one = 1;
+            ssize_t n = readn(wakeupFd_, &one, sizeof one);
+            if (n != sizeof(one)) {
+                LOG << "EventLoop::handleRead() reads " << n << " bytes instead of 8";
+            }
+            // pwakeupChannel_->setEvents(EPOLLIN | EPOLLET | EPOLLONESHOT);
+            pwakeupChannel_->setEvents(EPOLLIN | EPOLLET);
+        }
+
 
         void EventLoop::handleConn() {
             updatePoller(pwakeupChannel_, 0);

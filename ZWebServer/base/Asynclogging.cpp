@@ -9,6 +9,7 @@
 using namespace std;
 namespace zvws{
     namespace detail {
+        
 
         AsyncLogging::AsyncLogging(std::string logFileName, int flushIntervalN)
         :flushInterval_(flushIntervalN),
@@ -75,17 +76,22 @@ namespace zvws{
                 assert(!buffersToWrite.empty());
 
                 if(buffersToWrite.size() > 25) {
-                    char buf[256];
-                    snprintf(buf,sizeof(buf),"write log to tmpbuf at %s, %zd larger buffers\n", 
-                    Timestamp::now().toFormattedString().c_str(),
-                    buffersToWrite.size() - 2);
-                    fputs(buf,stderr);
-                    output.append(buf,static_cast<int>(strlen(buf)));
+                    // char buf[256];
+                    // snprintf(buf,sizeof(buf),"write log to tmpbuf at %s, %zd larger buffers\n", 
+                    // Timestamp::now().toFormattedString().c_str(),
+                    // buffersToWrite.size() - 2);
+                    // fputs(buf,stderr);
+                    // output.append(buf,static_cast<int>(strlen(buf)));
                     buffersToWrite.erase(buffersToWrite.begin() + 2, buffersToWrite.end());
                 }
                 for(const auto& buffer : buffersToWrite) {
                     output.append(buffer->data(), buffer->Length());
                 }
+
+                if(buffersToWrite.size() > 2) {
+                    buffersToWrite.resize(2);
+                }
+
                 
                 if(!newBuffer1) {
                     assert(!buffersToWrite.empty());

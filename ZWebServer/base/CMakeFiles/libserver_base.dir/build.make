@@ -83,10 +83,24 @@ ZWebServer/base/CMakeFiles/libserver_base.dir/Asynclogging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Asynclogging.cpp.s"
 	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/Asynclogging.cpp -o CMakeFiles/libserver_base.dir/Asynclogging.cpp.s
 
+ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
+ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ZWebServer/base/CountDownLatch.cpp
+ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o"
+	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o -MF CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o.d -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/CountDownLatch.cpp
+
+ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i"
+	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zt/program/XZtwebserver/ZWebServer/base/CountDownLatch.cpp > CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
+
+ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s"
+	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/CountDownLatch.cpp -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
+
 ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
 ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o: ZWebServer/base/Fileappend.cpp
 ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o -MF CMakeFiles/libserver_base.dir/Fileappend.cpp.o.d -o CMakeFiles/libserver_base.dir/Fileappend.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/Fileappend.cpp
 
 ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.i: cmake_force
@@ -100,7 +114,7 @@ ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.s: cmake_force
 ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
 ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o: ZWebServer/base/LoggFile.cpp
 ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o -MF CMakeFiles/libserver_base.dir/LoggFile.cpp.o.d -o CMakeFiles/libserver_base.dir/LoggFile.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/LoggFile.cpp
 
 ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.i: cmake_force
@@ -114,7 +128,7 @@ ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.s: cmake_force
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o: ZWebServer/base/Logging.cpp
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o -MF CMakeFiles/libserver_base.dir/Logging.cpp.o.d -o CMakeFiles/libserver_base.dir/Logging.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/Logging.cpp
 
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.i: cmake_force
@@ -124,20 +138,6 @@ ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.i: cmake_force
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Logging.cpp.s"
 	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/Logging.cpp -o CMakeFiles/libserver_base.dir/Logging.cpp.s
-
-ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
-ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ZWebServer/base/Thread.cpp
-ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o"
-	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o -MF CMakeFiles/libserver_base.dir/Thread.cpp.o.d -o CMakeFiles/libserver_base.dir/Thread.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/Thread.cpp
-
-ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/Thread.cpp.i"
-	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zt/program/XZtwebserver/ZWebServer/base/Thread.cpp > CMakeFiles/libserver_base.dir/Thread.cpp.i
-
-ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Thread.cpp.s"
-	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/Thread.cpp -o CMakeFiles/libserver_base.dir/Thread.cpp.s
 
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
 ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.o: ZWebServer/base/Logstream.cpp
@@ -153,40 +153,40 @@ ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Logstream.cpp.s"
 	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/Logstream.cpp -o CMakeFiles/libserver_base.dir/Logstream.cpp.s
 
-ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
-ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ZWebServer/base/CountDownLatch.cpp
-ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o"
-	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o -MF CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o.d -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/CountDownLatch.cpp
+ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/flags.make
+ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ZWebServer/base/Thread.cpp
+ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ZWebServer/base/CMakeFiles/libserver_base.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o"
+	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o -MF CMakeFiles/libserver_base.dir/Thread.cpp.o.d -o CMakeFiles/libserver_base.dir/Thread.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/base/Thread.cpp
 
-ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i"
-	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zt/program/XZtwebserver/ZWebServer/base/CountDownLatch.cpp > CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
+ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/Thread.cpp.i"
+	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zt/program/XZtwebserver/ZWebServer/base/Thread.cpp > CMakeFiles/libserver_base.dir/Thread.cpp.i
 
-ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s"
-	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/CountDownLatch.cpp -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
+ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Thread.cpp.s"
+	cd /home/zt/program/XZtwebserver/ZWebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/base/Thread.cpp -o CMakeFiles/libserver_base.dir/Thread.cpp.s
 
 # Object files for target libserver_base
 libserver_base_OBJECTS = \
 "CMakeFiles/libserver_base.dir/Asynclogging.cpp.o" \
+"CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o" \
 "CMakeFiles/libserver_base.dir/Fileappend.cpp.o" \
 "CMakeFiles/libserver_base.dir/LoggFile.cpp.o" \
 "CMakeFiles/libserver_base.dir/Logging.cpp.o" \
-"CMakeFiles/libserver_base.dir/Thread.cpp.o" \
 "CMakeFiles/libserver_base.dir/Logstream.cpp.o" \
-"CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o"
+"CMakeFiles/libserver_base.dir/Thread.cpp.o"
 
 # External object files for target libserver_base
 libserver_base_EXTERNAL_OBJECTS =
 
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/Asynclogging.cpp.o
+ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o
-ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.o
-ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o
+ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/build.make
 ZWebServer/base/libserver_base.a: ZWebServer/base/CMakeFiles/libserver_base.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libserver_base.a"

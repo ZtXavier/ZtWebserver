@@ -1,11 +1,11 @@
 set(LIB_SRC
     Asynclogging.cpp
+    CountDownLatch.cpp
     Fileappend.cpp
     LoggFile.cpp
     Logging.cpp
-    Thread.cpp
     Logstream.cpp
-    CountDownLatch.cpp
+    Thread.cpp
 )
 
 add_library(libserver_base ${LIB_SRC})

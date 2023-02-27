@@ -1,1 +1,1 @@
-g++ -g -Wall -std=c++11 -D_PTHREADS -Wno-unused-parameter -O0 -rdynamic CMakeFiles/logstest.dir/logstest.cpp.o -o logstest  ../libserver_base.a -lpthread -lrt 
+g++ -g -Wall -std=c++11 -D_PTHREADS -Wno-unused-parameter -O0 CMakeFiles/logstest.dir/logstest.cpp.o -o logstest  ../libserver_base.a -lpthread -lrt 

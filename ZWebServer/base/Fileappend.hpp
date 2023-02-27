@@ -23,7 +23,6 @@ class FileAppend : public Nocopyable{
 
         void Append(const char* logline,size_t loglen);
 
-        off_t HaveWtbytes();
 
 
 

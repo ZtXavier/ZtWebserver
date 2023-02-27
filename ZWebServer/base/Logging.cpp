@@ -13,9 +13,9 @@
 #include"CurrentThread.hpp"
 
 
-
 namespace zvws{
     namespace detail{
+    using namespace CurrentThread;
 
     static pthread_once_t once_control_ = PTHREAD_ONCE_INIT;
     static AsyncLogging *AsyncLogging_;

@@ -202,6 +202,30 @@ EventLoop.cpp.s:
 	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoop.cpp.s
 .PHONY : EventLoop.cpp.s
 
+EventLoopThread.o: EventLoopThread.cpp.o
+.PHONY : EventLoopThread.o
+
+# target to build an object file
+EventLoopThread.cpp.o:
+	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o
+.PHONY : EventLoopThread.cpp.o
+
+EventLoopThread.i: EventLoopThread.cpp.i
+.PHONY : EventLoopThread.i
+
+# target to preprocess a source file
+EventLoopThread.cpp.i:
+	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.i
+.PHONY : EventLoopThread.cpp.i
+
+EventLoopThread.s: EventLoopThread.cpp.s
+.PHONY : EventLoopThread.s
+
+# target to generate assembly for a file
+EventLoopThread.cpp.s:
+	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.s
+.PHONY : EventLoopThread.cpp.s
+
 EventLoopThreadPool.o: EventLoopThreadPool.cpp.o
 .PHONY : EventLoopThreadPool.o
 
@@ -388,6 +412,9 @@ help:
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"
 	@echo "... EventLoop.s"
+	@echo "... EventLoopThread.o"
+	@echo "... EventLoopThread.i"
+	@echo "... EventLoopThread.s"
 	@echo "... EventLoopThreadPool.o"
 	@echo "... EventLoopThreadPool.i"
 	@echo "... EventLoopThreadPool.s"

@@ -111,10 +111,24 @@ ZWebServer/CMakeFiles/ZWebServer.dir/EventLoop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZWebServer.dir/EventLoop.cpp.s"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/EventLoop.cpp -o CMakeFiles/ZWebServer.dir/EventLoop.cpp.s
 
+ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
+ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o: ZWebServer/EventLoopThread.cpp
+ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o"
+	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o -MF CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o.d -o CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/EventLoopThread.cpp
+
+ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.i"
+	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zt/program/XZtwebserver/ZWebServer/EventLoopThread.cpp > CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.i
+
+ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.s"
+	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zt/program/XZtwebserver/ZWebServer/EventLoopThread.cpp -o CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.s
+
 ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o: ZWebServer/EventLoopThreadPool.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o -MF CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o.d -o CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/EventLoopThreadPool.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.i: cmake_force
@@ -128,7 +142,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.s: cmake_force
 ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o: ZWebServer/Httpsolution.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o -MF CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o.d -o CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/Httpsolution.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.i: cmake_force
@@ -142,7 +156,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.s: cmake_force
 ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o: ZWebServer/server.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o -MF CMakeFiles/ZWebServer.dir/server.cpp.o.d -o CMakeFiles/ZWebServer.dir/server.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/server.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.i: cmake_force
@@ -156,7 +170,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.s: cmake_force
 ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o: ZWebServer/ThreadPool.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o -MF CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o.d -o CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/ThreadPool.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.i: cmake_force
@@ -170,7 +184,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.s: cmake_force
 ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o: ZWebServer/Timer.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o -MF CMakeFiles/ZWebServer.dir/Timer.cpp.o.d -o CMakeFiles/ZWebServer.dir/Timer.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/Timer.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.i: cmake_force
@@ -184,7 +198,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.s: cmake_force
 ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o: ZWebServer/Util.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o -MF CMakeFiles/ZWebServer.dir/Util.cpp.o.d -o CMakeFiles/ZWebServer.dir/Util.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/Util.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.i: cmake_force
@@ -198,7 +212,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.s: cmake_force
 ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/flags.make
 ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o: ZWebServer/Smain.cpp
 ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o: ZWebServer/CMakeFiles/ZWebServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o"
 	cd /home/zt/program/XZtwebserver/ZWebServer && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o -MF CMakeFiles/ZWebServer.dir/Smain.cpp.o.d -o CMakeFiles/ZWebServer.dir/Smain.cpp.o -c /home/zt/program/XZtwebserver/ZWebServer/Smain.cpp
 
 ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.i: cmake_force
@@ -214,6 +228,7 @@ ZWebServer_OBJECTS = \
 "CMakeFiles/ZWebServer.dir/Channel.cpp.o" \
 "CMakeFiles/ZWebServer.dir/Epoll.cpp.o" \
 "CMakeFiles/ZWebServer.dir/EventLoop.cpp.o" \
+"CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o" \
 "CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o" \
 "CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o" \
 "CMakeFiles/ZWebServer.dir/server.cpp.o" \
@@ -228,6 +243,7 @@ ZWebServer_EXTERNAL_OBJECTS =
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/Channel.cpp.o
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/Epoll.cpp.o
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/EventLoop.cpp.o
+ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o
@@ -238,7 +254,7 @@ ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/build.make
 ZWebServer/ZWebServer: ZWebServer/base/libserver_base.a
 ZWebServer/ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ZWebServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ZWebServer"
 	cd /home/zt/program/XZtwebserver/ZWebServer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ZWebServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

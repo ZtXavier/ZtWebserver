@@ -22,7 +22,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -203,9 +203,6 @@ ZWebServer_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ZWebServer_SOURCE_DIR:STATIC=/home/zt/program/XZtwebserver
-
-//Dependencies for the target
-libserver_base_LIB_DEPENDS:STATIC=general;pthread;general;rt;
 
 
 ########################

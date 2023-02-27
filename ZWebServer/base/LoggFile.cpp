@@ -16,10 +16,15 @@ namespace zvws {
 
         LogFile::~LogFile() {}
 
+        void LogFile::flush() {
+            MutexLockGuard lock(*mutex_);
+            file_->flush();
+        }
+
         void LogFile::append(const char* logline,int len) {
             // 思考线程安全的问题
             MutexLockGuard lock(*mutex_);
-            file_->flush();
+            append_unlocked(logline, len);
         }
 
         void LogFile::append_unlocked(const char* logline,int len) {

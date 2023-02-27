@@ -83,6 +83,11 @@ Logstream& Logstream::operator<<(unsigned long long v) {
     return *this;
 }
 
+Logstream& Logstream::operator<<(const void* v) {
+    *this << reinterpret_cast<const char*>(v);
+    return *this;
+}
+
 Logstream& Logstream::operator<<(double v) {
     if (buffer_.avail() >= kMaxNumericSize) {
         int len = snprintf(buffer_.current(), kMaxNumericSize, "%.12g", v);

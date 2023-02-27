@@ -2,6 +2,7 @@ set(SRCS
 	Channel.cpp
 	Epoll.cpp
 	EventLoop.cpp
+	EventLoopThread.cpp
 	EventLoopThreadPool.cpp
 	Httpsolution.cpp
 	server.cpp

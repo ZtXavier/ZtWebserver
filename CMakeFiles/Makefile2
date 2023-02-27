@@ -148,12 +148,12 @@ ZWebServer/tests/clean: ZWebServer/tests/CMakeFiles/HTTPClient.dir/clean
 ZWebServer/CMakeFiles/ZWebServer.dir/all: ZWebServer/base/CMakeFiles/libserver_base.dir/all
 	$(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target ZWebServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14 "Built target ZWebServer"
 .PHONY : ZWebServer/CMakeFiles/ZWebServer.dir/all
 
 # Build rule for subdir invocation for target.
 ZWebServer/CMakeFiles/ZWebServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/CMakeFiles/ZWebServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 0
 .PHONY : ZWebServer/CMakeFiles/ZWebServer.dir/rule
@@ -174,7 +174,7 @@ ZWebServer/CMakeFiles/ZWebServer.dir/clean:
 ZWebServer/base/CMakeFiles/libserver_base.dir/all:
 	$(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/depend
 	$(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=14,15,16,17,18,19,20,21 "Built target libserver_base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=15,16,17,18,19,20,21,22 "Built target libserver_base"
 .PHONY : ZWebServer/base/CMakeFiles/libserver_base.dir/all
 
 # Build rule for subdir invocation for target.
@@ -200,7 +200,7 @@ ZWebServer/base/CMakeFiles/libserver_base.dir/clean:
 ZWebServer/base/tests/CMakeFiles/logstest.dir/all: ZWebServer/base/CMakeFiles/libserver_base.dir/all
 	$(MAKE) $(MAKESILENT) -f ZWebServer/base/tests/CMakeFiles/logstest.dir/build.make ZWebServer/base/tests/CMakeFiles/logstest.dir/depend
 	$(MAKE) $(MAKESILENT) -f ZWebServer/base/tests/CMakeFiles/logstest.dir/build.make ZWebServer/base/tests/CMakeFiles/logstest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=22,23 "Built target logstest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zt/program/XZtwebserver/CMakeFiles --progress-num=23,24 "Built target logstest"
 .PHONY : ZWebServer/base/tests/CMakeFiles/logstest.dir/all
 
 # Build rule for subdir invocation for target.

@@ -4,9 +4,13 @@
 
 namespace zvws{
     namespace detail{
-FileAppend::FileAppend(const std::string& filename):fp_(::fopen(filename.c_str(),"ae")),writebytes_(0){
+FileAppend::FileAppend(const std::string& filename):fp_(::fopen(filename.c_str(),"ae")),writebytes_(0) {
     assert(fp_);
     ::setbuffer(fp_,buffer_,sizeof(buffer_));
+}
+
+FileAppend::~FileAppend() {
+    fclose(fp_);
 }
 
 void 

@@ -12,7 +12,7 @@ namespace zvws{
 
     
     namespace CurrentThread {
-        thread_local int t_cacheTid = 0;
+        thread_local int t_cachedTid = 0;
         thread_local char t_tidString[32];
         thread_local int t_tidStringLength = 6;
         thread_local const char* t_threadName = "defualt";

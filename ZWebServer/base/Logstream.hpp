@@ -1,5 +1,5 @@
-#ifndef LOGSTREAM_HPP_
-#define LOGSTREAM_HPP_
+#ifndef _LOGSTREAM_HPP_
+#define _LOGSTREAM_HPP_
 
 #include <memory>
 #include <string>
@@ -65,7 +65,6 @@ public:
         self& operator<<(unsigned long);
         self& operator<<(long long);
         self& operator<<(unsigned long long);
-
         self& operator<<(const void*);
 
         self& operator<<(float v) {

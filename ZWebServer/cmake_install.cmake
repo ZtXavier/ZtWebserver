@@ -43,9 +43,12 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
+  # Include the install script for the subdirectory.
   include("/home/zt/program/XZtwebserver/ZWebServer/base/cmake_install.cmake")
-  include("/home/zt/program/XZtwebserver/ZWebServer/tests/cmake_install.cmake")
+endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/zt/program/XZtwebserver/ZWebServer/tests/cmake_install.cmake")
 endif()
 

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZWebServer.dir/Epoll.cpp.o.d"
   "CMakeFiles/ZWebServer.dir/EventLoop.cpp.o"
   "CMakeFiles/ZWebServer.dir/EventLoop.cpp.o.d"
+  "CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o"
+  "CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o.d"
   "CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o"
   "CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o.d"
   "CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o"
