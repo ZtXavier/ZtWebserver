@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/zt/program/XZtwebserver/ZWebServer/tests/HTTPClient.cpp" "ZWebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o" "gcc" "ZWebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o.d"
+  "/home/zt/program/ZWebServer/ZWebServer/tests/HTTPClient.cpp" "tests/CMakeFiles/HTTPClient.dir/HTTPClient.o" "gcc" "tests/CMakeFiles/HTTPClient.dir/HTTPClient.o.d"
   )
 
 # Targets to which this target links.

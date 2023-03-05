@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zt/program/XZtwebserver
+CMAKE_SOURCE_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zt/program/XZtwebserver
+CMAKE_BINARY_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles /home/zt/program/XZtwebserver/ZWebServer/base//CMakeFiles/progress.marks
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 0
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles /home/zt/program/ZWebServer/ZWebServer/base//CMakeFiles/progress.marks
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/clean
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,200 +103,137 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/preinstall
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/preinstall
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-ZWebServer/base/CMakeFiles/libserver_base.dir/rule:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/CMakeFiles/libserver_base.dir/rule
-.PHONY : ZWebServer/base/CMakeFiles/libserver_base.dir/rule
+base/CMakeFiles/libserver_base.dir/rule:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/CMakeFiles/libserver_base.dir/rule
+.PHONY : base/CMakeFiles/libserver_base.dir/rule
 
 # Convenience name for target.
-libserver_base: ZWebServer/base/CMakeFiles/libserver_base.dir/rule
+libserver_base: base/CMakeFiles/libserver_base.dir/rule
 .PHONY : libserver_base
 
 # fast build rule for target.
 libserver_base/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/build
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/build
 .PHONY : libserver_base/fast
 
-Asynclogging.o: Asynclogging.cpp.o
+# target to build an object file
+Asynclogging.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Asynclogging.o
 .PHONY : Asynclogging.o
 
-# target to build an object file
-Asynclogging.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Asynclogging.cpp.o
-.PHONY : Asynclogging.cpp.o
-
-Asynclogging.i: Asynclogging.cpp.i
+# target to preprocess a source file
+Asynclogging.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Asynclogging.i
 .PHONY : Asynclogging.i
 
-# target to preprocess a source file
-Asynclogging.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Asynclogging.cpp.i
-.PHONY : Asynclogging.cpp.i
-
-Asynclogging.s: Asynclogging.cpp.s
+# target to generate assembly for a file
+Asynclogging.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Asynclogging.s
 .PHONY : Asynclogging.s
 
-# target to generate assembly for a file
-Asynclogging.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Asynclogging.cpp.s
-.PHONY : Asynclogging.cpp.s
-
-CountDownLatch.o: CountDownLatch.cpp.o
+# target to build an object file
+CountDownLatch.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/CountDownLatch.o
 .PHONY : CountDownLatch.o
 
-# target to build an object file
-CountDownLatch.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o
-.PHONY : CountDownLatch.cpp.o
-
-CountDownLatch.i: CountDownLatch.cpp.i
+# target to preprocess a source file
+CountDownLatch.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/CountDownLatch.i
 .PHONY : CountDownLatch.i
 
-# target to preprocess a source file
-CountDownLatch.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
-.PHONY : CountDownLatch.cpp.i
-
-CountDownLatch.s: CountDownLatch.cpp.s
+# target to generate assembly for a file
+CountDownLatch.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/CountDownLatch.s
 .PHONY : CountDownLatch.s
 
-# target to generate assembly for a file
-CountDownLatch.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
-.PHONY : CountDownLatch.cpp.s
-
-Fileappend.o: Fileappend.cpp.o
+# target to build an object file
+Fileappend.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Fileappend.o
 .PHONY : Fileappend.o
 
-# target to build an object file
-Fileappend.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.o
-.PHONY : Fileappend.cpp.o
-
-Fileappend.i: Fileappend.cpp.i
+# target to preprocess a source file
+Fileappend.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Fileappend.i
 .PHONY : Fileappend.i
 
-# target to preprocess a source file
-Fileappend.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.i
-.PHONY : Fileappend.cpp.i
-
-Fileappend.s: Fileappend.cpp.s
+# target to generate assembly for a file
+Fileappend.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Fileappend.s
 .PHONY : Fileappend.s
 
-# target to generate assembly for a file
-Fileappend.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Fileappend.cpp.s
-.PHONY : Fileappend.cpp.s
-
-LoggFile.o: LoggFile.cpp.o
+# target to build an object file
+LoggFile.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/LoggFile.o
 .PHONY : LoggFile.o
 
-# target to build an object file
-LoggFile.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.o
-.PHONY : LoggFile.cpp.o
-
-LoggFile.i: LoggFile.cpp.i
+# target to preprocess a source file
+LoggFile.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/LoggFile.i
 .PHONY : LoggFile.i
 
-# target to preprocess a source file
-LoggFile.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.i
-.PHONY : LoggFile.cpp.i
-
-LoggFile.s: LoggFile.cpp.s
+# target to generate assembly for a file
+LoggFile.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/LoggFile.s
 .PHONY : LoggFile.s
 
-# target to generate assembly for a file
-LoggFile.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/LoggFile.cpp.s
-.PHONY : LoggFile.cpp.s
-
-Logging.o: Logging.cpp.o
+# target to build an object file
+Logging.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Logging.o
 .PHONY : Logging.o
 
-# target to build an object file
-Logging.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o
-.PHONY : Logging.cpp.o
-
-Logging.i: Logging.cpp.i
+# target to preprocess a source file
+Logging.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Logging.i
 .PHONY : Logging.i
 
-# target to preprocess a source file
-Logging.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.i
-.PHONY : Logging.cpp.i
-
-Logging.s: Logging.cpp.s
+# target to generate assembly for a file
+Logging.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Logging.s
 .PHONY : Logging.s
 
-# target to generate assembly for a file
-Logging.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.s
-.PHONY : Logging.cpp.s
-
-Logstream.o: Logstream.cpp.o
+# target to build an object file
+Logstream.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Logstream.o
 .PHONY : Logstream.o
 
-# target to build an object file
-Logstream.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.o
-.PHONY : Logstream.cpp.o
-
-Logstream.i: Logstream.cpp.i
+# target to preprocess a source file
+Logstream.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Logstream.i
 .PHONY : Logstream.i
 
-# target to preprocess a source file
-Logstream.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.i
-.PHONY : Logstream.cpp.i
-
-Logstream.s: Logstream.cpp.s
+# target to generate assembly for a file
+Logstream.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Logstream.s
 .PHONY : Logstream.s
 
-# target to generate assembly for a file
-Logstream.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Logstream.cpp.s
-.PHONY : Logstream.cpp.s
-
-Thread.o: Thread.cpp.o
+# target to build an object file
+Thread.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Thread.o
 .PHONY : Thread.o
 
-# target to build an object file
-Thread.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o
-.PHONY : Thread.cpp.o
-
-Thread.i: Thread.cpp.i
+# target to preprocess a source file
+Thread.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Thread.i
 .PHONY : Thread.i
 
-# target to preprocess a source file
-Thread.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.i
-.PHONY : Thread.cpp.i
-
-Thread.s: Thread.cpp.s
-.PHONY : Thread.s
-
 # target to generate assembly for a file
-Thread.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/CMakeFiles/libserver_base.dir/build.make ZWebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.s
-.PHONY : Thread.cpp.s
+Thread.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/Thread.s
+.PHONY : Thread.s
 
 # Help Target
 help:
@@ -339,6 +276,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

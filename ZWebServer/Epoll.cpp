@@ -14,7 +14,7 @@
 #include"Util.hpp"
 
 
-namespace zvws {
+    namespace zvws {
     namespace detail {
         const int EventNums = 4096;
         const int EpollWait_Time = 10000;
@@ -75,6 +75,7 @@ namespace zvws {
         }
 
         std::vector<Spt_Channel> Epoll::poll() {
+            LOG << "enter Epoll::poll()\n";
             while(true) {
                 int event_count = epoll_wait(epollfd_, &*events_.begin(), events_.size(), EpollWait_Time);
                 if (event_count < 0) {
@@ -117,8 +118,8 @@ namespace zvws {
                 LOG  << "timer add failed";
             }
         }
+
+
+
     }
-}
-
-
-
+    }

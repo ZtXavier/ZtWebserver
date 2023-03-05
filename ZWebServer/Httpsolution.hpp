@@ -79,11 +79,10 @@ namespace detail {
             static std::unordered_map<std::string,std::string> mime;
             MimeType();
             MimeType(const MimeType &minetype);
+            static pthread_once_t once_control;
 
         public:
             static std::string getMime(const std::string &buffix);
-        private:
-            static pthread_once_t once_control;
     };
 
     class Httpsolution : public std::enable_shared_from_this<Httpsolution> {

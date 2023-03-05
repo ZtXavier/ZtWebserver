@@ -3,6 +3,8 @@
 #include<string>
 #include<cstdlib>
 
+namespace zvws {
+    namespace detail {
 ssize_t readn(int fd, void *buff, size_t n);
 ssize_t readn(int fd, std::string &inBuffer, bool &zero);
 ssize_t readn(int fd, std::string &inBuffer);
@@ -16,4 +18,6 @@ void setSocketNoLinger(int fd);
 int setSocketNoBlocking(int fd);
 int socket_bind_listen(int port);
 
+    }
+}
 #endif

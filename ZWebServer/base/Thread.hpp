@@ -21,6 +21,8 @@ namespace zvws{
             ~Thread();
             void start();
             int join();
+            const std::string& name() const { return name_;}
+            pid_t tid() const {return tid_;}
             bool started() const {return started_;}
 
         private:

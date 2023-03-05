@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zt/program/XZtwebserver
+CMAKE_SOURCE_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zt/program/XZtwebserver
+CMAKE_BINARY_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles /home/zt/program/XZtwebserver/ZWebServer//CMakeFiles/progress.marks
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles /home/zt/program/ZWebServer/ZWebServer//CMakeFiles/progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/clean
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -103,296 +103,220 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/preinstall
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/preinstall
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-ZWebServer/CMakeFiles/ZWebServer.dir/rule:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/CMakeFiles/ZWebServer.dir/rule
-.PHONY : ZWebServer/CMakeFiles/ZWebServer.dir/rule
+#=============================================================================
+# Target rules for targets named ZWebServer
 
-# Convenience name for target.
-ZWebServer: ZWebServer/CMakeFiles/ZWebServer.dir/rule
+# Build rule for target.
+ZWebServer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer
 .PHONY : ZWebServer
 
 # fast build rule for target.
 ZWebServer/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/build
 .PHONY : ZWebServer/fast
 
-Channel.o: Channel.cpp.o
+#=============================================================================
+# Target rules for targets named libserver_base
+
+# Build rule for target.
+libserver_base: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libserver_base
+.PHONY : libserver_base
+
+# fast build rule for target.
+libserver_base/fast:
+	$(MAKE) $(MAKESILENT) -f base/CMakeFiles/libserver_base.dir/build.make base/CMakeFiles/libserver_base.dir/build
+.PHONY : libserver_base/fast
+
+#=============================================================================
+# Target rules for targets named logstest
+
+# Build rule for target.
+logstest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 logstest
+.PHONY : logstest
+
+# fast build rule for target.
+logstest/fast:
+	$(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/logstest.dir/build.make base/tests/CMakeFiles/logstest.dir/build
+.PHONY : logstest/fast
+
+#=============================================================================
+# Target rules for targets named HTTPClient
+
+# Build rule for target.
+HTTPClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTTPClient
+.PHONY : HTTPClient
+
+# fast build rule for target.
+HTTPClient/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/HTTPClient.dir/build.make tests/CMakeFiles/HTTPClient.dir/build
+.PHONY : HTTPClient/fast
+
+# target to build an object file
+Channel.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Channel.o
 .PHONY : Channel.o
 
-# target to build an object file
-Channel.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Channel.cpp.o
-.PHONY : Channel.cpp.o
-
-Channel.i: Channel.cpp.i
+# target to preprocess a source file
+Channel.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Channel.i
 .PHONY : Channel.i
 
-# target to preprocess a source file
-Channel.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Channel.cpp.i
-.PHONY : Channel.cpp.i
-
-Channel.s: Channel.cpp.s
+# target to generate assembly for a file
+Channel.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Channel.s
 .PHONY : Channel.s
 
-# target to generate assembly for a file
-Channel.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Channel.cpp.s
-.PHONY : Channel.cpp.s
-
-Epoll.o: Epoll.cpp.o
+# target to build an object file
+Epoll.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Epoll.o
 .PHONY : Epoll.o
 
-# target to build an object file
-Epoll.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Epoll.cpp.o
-.PHONY : Epoll.cpp.o
-
-Epoll.i: Epoll.cpp.i
+# target to preprocess a source file
+Epoll.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Epoll.i
 .PHONY : Epoll.i
 
-# target to preprocess a source file
-Epoll.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Epoll.cpp.i
-.PHONY : Epoll.cpp.i
-
-Epoll.s: Epoll.cpp.s
+# target to generate assembly for a file
+Epoll.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Epoll.s
 .PHONY : Epoll.s
 
-# target to generate assembly for a file
-Epoll.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Epoll.cpp.s
-.PHONY : Epoll.cpp.s
-
-EventLoop.o: EventLoop.cpp.o
+# target to build an object file
+EventLoop.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoop.o
 .PHONY : EventLoop.o
 
-# target to build an object file
-EventLoop.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoop.cpp.o
-.PHONY : EventLoop.cpp.o
-
-EventLoop.i: EventLoop.cpp.i
+# target to preprocess a source file
+EventLoop.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoop.i
 .PHONY : EventLoop.i
 
-# target to preprocess a source file
-EventLoop.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoop.cpp.i
-.PHONY : EventLoop.cpp.i
-
-EventLoop.s: EventLoop.cpp.s
+# target to generate assembly for a file
+EventLoop.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoop.s
 .PHONY : EventLoop.s
 
-# target to generate assembly for a file
-EventLoop.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoop.cpp.s
-.PHONY : EventLoop.cpp.s
-
-EventLoopThread.o: EventLoopThread.cpp.o
+# target to build an object file
+EventLoopThread.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoopThread.o
 .PHONY : EventLoopThread.o
 
-# target to build an object file
-EventLoopThread.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.o
-.PHONY : EventLoopThread.cpp.o
-
-EventLoopThread.i: EventLoopThread.cpp.i
+# target to preprocess a source file
+EventLoopThread.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoopThread.i
 .PHONY : EventLoopThread.i
 
-# target to preprocess a source file
-EventLoopThread.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.i
-.PHONY : EventLoopThread.cpp.i
-
-EventLoopThread.s: EventLoopThread.cpp.s
+# target to generate assembly for a file
+EventLoopThread.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoopThread.s
 .PHONY : EventLoopThread.s
 
-# target to generate assembly for a file
-EventLoopThread.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThread.cpp.s
-.PHONY : EventLoopThread.cpp.s
-
-EventLoopThreadPool.o: EventLoopThreadPool.cpp.o
+# target to build an object file
+EventLoopThreadPool.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoopThreadPool.o
 .PHONY : EventLoopThreadPool.o
 
-# target to build an object file
-EventLoopThreadPool.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.o
-.PHONY : EventLoopThreadPool.cpp.o
-
-EventLoopThreadPool.i: EventLoopThreadPool.cpp.i
+# target to preprocess a source file
+EventLoopThreadPool.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoopThreadPool.i
 .PHONY : EventLoopThreadPool.i
 
-# target to preprocess a source file
-EventLoopThreadPool.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.i
-.PHONY : EventLoopThreadPool.cpp.i
-
-EventLoopThreadPool.s: EventLoopThreadPool.cpp.s
+# target to generate assembly for a file
+EventLoopThreadPool.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/EventLoopThreadPool.s
 .PHONY : EventLoopThreadPool.s
 
-# target to generate assembly for a file
-EventLoopThreadPool.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/EventLoopThreadPool.cpp.s
-.PHONY : EventLoopThreadPool.cpp.s
-
-Httpsolution.o: Httpsolution.cpp.o
+# target to build an object file
+Httpsolution.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Httpsolution.o
 .PHONY : Httpsolution.o
 
-# target to build an object file
-Httpsolution.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.o
-.PHONY : Httpsolution.cpp.o
-
-Httpsolution.i: Httpsolution.cpp.i
+# target to preprocess a source file
+Httpsolution.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Httpsolution.i
 .PHONY : Httpsolution.i
 
-# target to preprocess a source file
-Httpsolution.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.i
-.PHONY : Httpsolution.cpp.i
-
-Httpsolution.s: Httpsolution.cpp.s
+# target to generate assembly for a file
+Httpsolution.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Httpsolution.s
 .PHONY : Httpsolution.s
 
-# target to generate assembly for a file
-Httpsolution.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Httpsolution.cpp.s
-.PHONY : Httpsolution.cpp.s
-
-Smain.o: Smain.cpp.o
-.PHONY : Smain.o
-
 # target to build an object file
-Smain.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.o
-.PHONY : Smain.cpp.o
-
-Smain.i: Smain.cpp.i
-.PHONY : Smain.i
+Main.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Main.o
+.PHONY : Main.o
 
 # target to preprocess a source file
-Smain.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.i
-.PHONY : Smain.cpp.i
-
-Smain.s: Smain.cpp.s
-.PHONY : Smain.s
+Main.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Main.i
+.PHONY : Main.i
 
 # target to generate assembly for a file
-Smain.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Smain.cpp.s
-.PHONY : Smain.cpp.s
-
-ThreadPool.o: ThreadPool.cpp.o
-.PHONY : ThreadPool.o
+Main.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Main.s
+.PHONY : Main.s
 
 # target to build an object file
-ThreadPool.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.o
-.PHONY : ThreadPool.cpp.o
-
-ThreadPool.i: ThreadPool.cpp.i
-.PHONY : ThreadPool.i
+Server.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Server.o
+.PHONY : Server.o
 
 # target to preprocess a source file
-ThreadPool.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.i
-.PHONY : ThreadPool.cpp.i
-
-ThreadPool.s: ThreadPool.cpp.s
-.PHONY : ThreadPool.s
+Server.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Server.i
+.PHONY : Server.i
 
 # target to generate assembly for a file
-ThreadPool.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/ThreadPool.cpp.s
-.PHONY : ThreadPool.cpp.s
+Server.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Server.s
+.PHONY : Server.s
 
-Timer.o: Timer.cpp.o
+# target to build an object file
+Timer.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Timer.o
 .PHONY : Timer.o
 
-# target to build an object file
-Timer.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.o
-.PHONY : Timer.cpp.o
-
-Timer.i: Timer.cpp.i
+# target to preprocess a source file
+Timer.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Timer.i
 .PHONY : Timer.i
 
-# target to preprocess a source file
-Timer.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.i
-.PHONY : Timer.cpp.i
-
-Timer.s: Timer.cpp.s
+# target to generate assembly for a file
+Timer.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Timer.s
 .PHONY : Timer.s
 
-# target to generate assembly for a file
-Timer.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Timer.cpp.s
-.PHONY : Timer.cpp.s
-
-Util.o: Util.cpp.o
+# target to build an object file
+Util.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Util.o
 .PHONY : Util.o
 
-# target to build an object file
-Util.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.o
-.PHONY : Util.cpp.o
-
-Util.i: Util.cpp.i
+# target to preprocess a source file
+Util.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Util.i
 .PHONY : Util.i
 
-# target to preprocess a source file
-Util.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.i
-.PHONY : Util.cpp.i
-
-Util.s: Util.cpp.s
+# target to generate assembly for a file
+Util.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ZWebServer.dir/build.make CMakeFiles/ZWebServer.dir/Util.s
 .PHONY : Util.s
-
-# target to generate assembly for a file
-Util.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/Util.cpp.s
-.PHONY : Util.cpp.s
-
-server.o: server.cpp.o
-.PHONY : server.o
-
-# target to build an object file
-server.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.o
-.PHONY : server.cpp.o
-
-server.i: server.cpp.i
-.PHONY : server.i
-
-# target to preprocess a source file
-server.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.i
-.PHONY : server.cpp.i
-
-server.s: server.cpp.s
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/CMakeFiles/ZWebServer.dir/build.make ZWebServer/CMakeFiles/ZWebServer.dir/server.cpp.s
-.PHONY : server.cpp.s
 
 # Help Target
 help:
@@ -402,7 +326,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... HTTPClient"
 	@echo "... ZWebServer"
+	@echo "... libserver_base"
+	@echo "... logstest"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
@@ -421,21 +348,18 @@ help:
 	@echo "... Httpsolution.o"
 	@echo "... Httpsolution.i"
 	@echo "... Httpsolution.s"
-	@echo "... Smain.o"
-	@echo "... Smain.i"
-	@echo "... Smain.s"
-	@echo "... ThreadPool.o"
-	@echo "... ThreadPool.i"
-	@echo "... ThreadPool.s"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
+	@echo "... Server.o"
+	@echo "... Server.i"
+	@echo "... Server.s"
 	@echo "... Timer.o"
 	@echo "... Timer.i"
 	@echo "... Timer.s"
 	@echo "... Util.o"
 	@echo "... Util.i"
 	@echo "... Util.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
 .PHONY : help
 
 
@@ -447,6 +371,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

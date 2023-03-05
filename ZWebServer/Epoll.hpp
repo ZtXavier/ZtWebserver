@@ -25,7 +25,7 @@ class Epoll {
 
         void add_timer(std::shared_ptr<Channel> req_data, int timeout);
         void handleExpired();
-        int getTimerfd() {
+        int getEpollfd() {
             return epollfd_;
         }
 

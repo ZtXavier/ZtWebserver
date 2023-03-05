@@ -38,7 +38,7 @@ namespace zvws{
 
 #define LOG Logging(__FILE__, __LINE__).stream()
 
-   }
+}
 }
 
 

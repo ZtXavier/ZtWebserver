@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zt/program/XZtwebserver
+CMAKE_SOURCE_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zt/program/XZtwebserver
+CMAKE_BINARY_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles /home/zt/program/XZtwebserver/ZWebServer/base/tests//CMakeFiles/progress.marks
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 0
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles /home/zt/program/ZWebServer/ZWebServer/base/tests//CMakeFiles/progress.marks
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/tests/clean
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,56 +103,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/tests/preinstall
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/tests/preinstall
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-ZWebServer/base/tests/CMakeFiles/logstest.dir/rule:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/base/tests/CMakeFiles/logstest.dir/rule
-.PHONY : ZWebServer/base/tests/CMakeFiles/logstest.dir/rule
+base/tests/CMakeFiles/logstest.dir/rule:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/tests/CMakeFiles/logstest.dir/rule
+.PHONY : base/tests/CMakeFiles/logstest.dir/rule
 
 # Convenience name for target.
-logstest: ZWebServer/base/tests/CMakeFiles/logstest.dir/rule
+logstest: base/tests/CMakeFiles/logstest.dir/rule
 .PHONY : logstest
 
 # fast build rule for target.
 logstest/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/tests/CMakeFiles/logstest.dir/build.make ZWebServer/base/tests/CMakeFiles/logstest.dir/build
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/logstest.dir/build.make base/tests/CMakeFiles/logstest.dir/build
 .PHONY : logstest/fast
 
-logstest.o: logstest.cpp.o
+# target to build an object file
+logstest.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/logstest.dir/build.make base/tests/CMakeFiles/logstest.dir/logstest.o
 .PHONY : logstest.o
 
-# target to build an object file
-logstest.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/tests/CMakeFiles/logstest.dir/build.make ZWebServer/base/tests/CMakeFiles/logstest.dir/logstest.cpp.o
-.PHONY : logstest.cpp.o
-
-logstest.i: logstest.cpp.i
+# target to preprocess a source file
+logstest.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/logstest.dir/build.make base/tests/CMakeFiles/logstest.dir/logstest.i
 .PHONY : logstest.i
 
-# target to preprocess a source file
-logstest.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/tests/CMakeFiles/logstest.dir/build.make ZWebServer/base/tests/CMakeFiles/logstest.dir/logstest.cpp.i
-.PHONY : logstest.cpp.i
-
-logstest.s: logstest.cpp.s
-.PHONY : logstest.s
-
 # target to generate assembly for a file
-logstest.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/base/tests/CMakeFiles/logstest.dir/build.make ZWebServer/base/tests/CMakeFiles/logstest.dir/logstest.cpp.s
-.PHONY : logstest.cpp.s
+logstest.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f base/tests/CMakeFiles/logstest.dir/build.make base/tests/CMakeFiles/logstest.dir/logstest.s
+.PHONY : logstest.s
 
 # Help Target
 help:
@@ -177,6 +168,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

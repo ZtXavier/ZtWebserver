@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zt/program/XZtwebserver
+CMAKE_SOURCE_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zt/program/XZtwebserver
+CMAKE_BINARY_DIR = /home/zt/program/ZWebServer/ZWebServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles /home/zt/program/XZtwebserver/ZWebServer/tests//CMakeFiles/progress.marks
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/XZtwebserver/CMakeFiles 0
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles /home/zt/program/ZWebServer/ZWebServer/tests//CMakeFiles/progress.marks
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zt/program/ZWebServer/ZWebServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/tests/clean
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,56 +103,47 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/tests/preinstall
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/tests/preinstall
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-ZWebServer/tests/CMakeFiles/HTTPClient.dir/rule:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ZWebServer/tests/CMakeFiles/HTTPClient.dir/rule
-.PHONY : ZWebServer/tests/CMakeFiles/HTTPClient.dir/rule
+tests/CMakeFiles/HTTPClient.dir/rule:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/HTTPClient.dir/rule
+.PHONY : tests/CMakeFiles/HTTPClient.dir/rule
 
 # Convenience name for target.
-HTTPClient: ZWebServer/tests/CMakeFiles/HTTPClient.dir/rule
+HTTPClient: tests/CMakeFiles/HTTPClient.dir/rule
 .PHONY : HTTPClient
 
 # fast build rule for target.
 HTTPClient/fast:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/tests/CMakeFiles/HTTPClient.dir/build.make ZWebServer/tests/CMakeFiles/HTTPClient.dir/build
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/HTTPClient.dir/build.make tests/CMakeFiles/HTTPClient.dir/build
 .PHONY : HTTPClient/fast
 
-HTTPClient.o: HTTPClient.cpp.o
+# target to build an object file
+HTTPClient.o:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/HTTPClient.dir/build.make tests/CMakeFiles/HTTPClient.dir/HTTPClient.o
 .PHONY : HTTPClient.o
 
-# target to build an object file
-HTTPClient.cpp.o:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/tests/CMakeFiles/HTTPClient.dir/build.make ZWebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o
-.PHONY : HTTPClient.cpp.o
-
-HTTPClient.i: HTTPClient.cpp.i
+# target to preprocess a source file
+HTTPClient.i:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/HTTPClient.dir/build.make tests/CMakeFiles/HTTPClient.dir/HTTPClient.i
 .PHONY : HTTPClient.i
 
-# target to preprocess a source file
-HTTPClient.cpp.i:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/tests/CMakeFiles/HTTPClient.dir/build.make ZWebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.i
-.PHONY : HTTPClient.cpp.i
-
-HTTPClient.s: HTTPClient.cpp.s
-.PHONY : HTTPClient.s
-
 # target to generate assembly for a file
-HTTPClient.cpp.s:
-	cd /home/zt/program/XZtwebserver && $(MAKE) $(MAKESILENT) -f ZWebServer/tests/CMakeFiles/HTTPClient.dir/build.make ZWebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.s
-.PHONY : HTTPClient.cpp.s
+HTTPClient.s:
+	cd /home/zt/program/ZWebServer/ZWebServer && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/HTTPClient.dir/build.make tests/CMakeFiles/HTTPClient.dir/HTTPClient.s
+.PHONY : HTTPClient.s
 
 # Help Target
 help:
@@ -177,6 +168,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zt/program/XZtwebserver && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zt/program/ZWebServer/ZWebServer && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

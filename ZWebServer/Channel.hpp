@@ -27,10 +27,6 @@ class Channel {
 
         std::weak_ptr<Httpsolution> holder_;
 
-        int parse_uri();
-        int parse_Header();
-        int analysisRequest();
-
         Callback readHandler_;
         Callback writeHandler_;
         Callback errorHandler_;

@@ -7,6 +7,7 @@
 
 namespace zvws {
     namespace detail {
+        
         pthread_mutex_t ThreadPool::mutex_ = PTHREAD_MUTEX_INITIALIZER;
         pthread_cond_t  ThreadPool::cond_ = PTHREAD_COND_INITIALIZER;
         std::vector<pthread_t> ThreadPool::threads;

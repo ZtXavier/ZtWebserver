@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o"
-  "CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o.d"
+  "CMakeFiles/HTTPClient.dir/HTTPClient.o"
+  "CMakeFiles/HTTPClient.dir/HTTPClient.o.d"
   "HTTPClient"
   "HTTPClient.pdb"
 )

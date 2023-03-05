@@ -6,8 +6,8 @@
 #include"EventLoopThread.hpp"
 
 
-namespace zvws {
 
+    namespace zvws {
     namespace detail {
 
         EventLoopThread::EventLoopThread() 
@@ -15,9 +15,7 @@ namespace zvws {
         exiting_(false),
         thread_(std::bind(&EventLoopThread::ThreadFunc,this),"EventLoopThread"),
         mutex_(),
-        cond_(mutex_) {
-            
-        }
+        cond_(mutex_) {}
 
         EventLoopThread::~EventLoopThread() {
             exiting_ = true;
@@ -30,7 +28,7 @@ namespace zvws {
         EventLoop* EventLoopThread::StartLoop() {
             assert(!thread_.started());
             thread_.start();
-            {
+             {
                 MutexLockGuard lock(mutex_);
                 while (loop_ == NULL) {
                     cond_.wait();
@@ -51,4 +49,4 @@ namespace zvws {
             loop_ = NULL;
         }
     }
-}
+    }
