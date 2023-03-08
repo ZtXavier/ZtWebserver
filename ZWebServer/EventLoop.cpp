@@ -29,7 +29,7 @@
         eventloophandling_(false),
         callingPendingFunctor_(false),
         threadId_(CurrentThread::tid()),
-        pwakeupChannel_(new Channel(this,wakeupFd_)) {
+        pwakeupChannel_(new Channel(this, wakeupFd_)) {
             // 判断线程是否已经创建了Eventloop对象,如果创建了就直接退出
             if(t_loopInThisThread) {
                 LOG  << "Another EventLoop" << t_loopInThisThread << "exists in the thread" << threadId_;
@@ -99,6 +99,7 @@
             std::vector<Spt_Channel> ret;
             while(!quit_) {
                 ret.clear();
+                // 这里是拿到所有的响应事件的指针
                 ret = poller_->poll();
                 eventloophandling_ = true;
                 for(auto &it : ret) {

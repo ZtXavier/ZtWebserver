@@ -23,9 +23,7 @@ TimerNode::~TimerNode() {
 }
 
 TimerNode::TimerNode(TimerNode &tn) 
-:Spthttpdata_(tn.Spthttpdata_), expired_(0) {
-
-}
+:Spthttpdata_(tn.Spthttpdata_), expired_(0) {}
 
 void TimerNode::update(int timeout) {
     struct timeval now;
@@ -46,7 +44,7 @@ bool TimerNode::isValid() {
 }
 
 void TimerNode::chearReq() {
-    Spthttpdata_->reset();
+    Spthttpdata_.reset();
     this->setDeleted();
 }
 

@@ -13,7 +13,7 @@
 
 namespace zvws {
     namespace detail {
-
+        // 在pthread_once中初始化静态变量
         pthread_once_t MimeType::once_control = PTHREAD_ONCE_INIT;
         std::unordered_map<std::string, std::string> MimeType::mime;
         const __uint32_t DEFAULT_EVENT = EPOLLIN | EPOLLET | EPOLLONESHOT;
@@ -107,6 +107,7 @@ namespace zvws {
 
         // 获取文件后缀名
         std::string MimeType::getMime(const std::string& suffix) {
+            // 在多线程的环境下一般都是用这种方式来初始化静态变量
             pthread_once(&once_control, MimeType::init);
             // 没有找到后缀名
             if (mime.find(suffix) == mime.end()) {
@@ -165,7 +166,7 @@ namespace zvws {
                 bool zero = false;
                 int read_num = readn(fd_, inBuffer_, zero);
                 LOG  << "Request: " << inBuffer_;
-                // 来判断连接的状态
+                // 来判断连接的状态,如果是未连接的话
                 if(connectionState_ == H_DISCONNECTING) {
                     inBuffer_.clear();
                     break;
@@ -563,14 +564,14 @@ namespace zvws {
             body_buff += "<html><title>oh! find error...</title>";
             body_buff += "<body bgcolor=\"0000ff\">";
             body_buff += std::to_string(err) + short_msg;
-            body_buff += "<hr><em> ZWebserver</em>\n</body></html>";
+            body_buff += "<hr><em> ZWebServer</em>\n</body></html>";
 
             std::string header_buff;
             header_buff += "HTTP/1.1 " + std::to_string(err) + short_msg + "\r\n";
             header_buff += "Content-Type: text/html\r\n";
             header_buff += "Connection: Close\r\n";
             header_buff += "Content-Length: " + std::to_string(body_buff.size()) + "\r\n";
-            header_buff += "ZWebserver\r\n";
+            header_buff += "ZWebServer\r\n";
             header_buff += "\r\n";
             sprintf(send_Buffer, "%s", header_buff.c_str());
             writen(fd, send_Buffer, strlen(send_Buffer));
@@ -586,7 +587,7 @@ namespace zvws {
         }
 
         void Httpsolution::newEvent() {
-            channel_->setRevents(DEFAULT_EVENT);
+            channel_->setEvents(DEFAULT_EVENT);
             loop_->addToPoller(channel_, DEFAULT_EXPIRED_TIME);
         }
     }

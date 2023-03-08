@@ -23,9 +23,7 @@
             assert(epollfd_ > 0);
         }
 
-        Epoll::~Epoll() {
-
-        }
+        Epoll::~Epoll() {}
 
         void Epoll::epoll_add(Spt_Channel request, int timeout) {
             int fd = request->getFd();
@@ -84,6 +82,8 @@
                 std::vector<Spt_Channel> req_data = getEventsRequest(event_count);
                 if(req_data.size() > 0) {
                     return req_data;
+                } else {
+                    LOG << "NOT HAVE EVENTS\n";
                 }
             }
         }

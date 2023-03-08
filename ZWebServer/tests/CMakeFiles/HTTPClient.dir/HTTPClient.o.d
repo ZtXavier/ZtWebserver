@@ -54,7 +54,9 @@ tests/CMakeFiles/HTTPClient.dir/HTTPClient.o: \
  /usr/include/strings.h /usr/include/sys/epoll.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
- /usr/include/bits/epoll.h /usr/include/unistd.h \
+ /usr/include/bits/epoll.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/bits/timex.h /usr/include/bits/types/struct_tm.h \
+ /usr/include/bits/types/struct_itimerspec.h /usr/include/unistd.h \
  /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
  /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
  /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
@@ -84,9 +86,7 @@ tests/CMakeFiles/HTTPClient.dir/HTTPClient.o: \
  /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
  /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
- /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
- /usr/include/bits/types/struct_tm.h \
- /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
+ /usr/include/bits/setjmp.h \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
