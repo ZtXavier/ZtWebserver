@@ -86,6 +86,9 @@
                 MutexLockGuard lock(mutex_);
                 pendingFunctors_.emplace_back(std::move(cb));
             }
+
+            // 如果不是当前的线程或者需要回调时那么需要直接
+            // 向已经被eventfd唤醒的套接字中写入
             if(!isInLoopThread() || callingPendingFunctor_) {
                 wakeup();
             }
